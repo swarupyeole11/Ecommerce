@@ -2,10 +2,7 @@ import React from 'react';
 import { Product, Footer, HeroBanner } from '../components'
 import { client } from '../lib/client'
 
-
-
-
-const Home   = (/*{products , bannerData}*/) => {
+const Home   = ({products ,bannerData}) => {
 
   return (
     <>
@@ -18,7 +15,7 @@ const Home   = (/*{products , bannerData}*/) => {
       </div>
 
       <div>
-        {/* {products?.map((product) => product.name)} */}
+        {products?.map((product) => product.name)}
       </div>
 
       <Footer/>
@@ -31,20 +28,19 @@ const Home   = (/*{products , bannerData}*/) => {
 
 // whatever the getServerSide Props returns it gets populated into the function above i,e Home funciton
 
-// export const getServerSideProps = async () => {
-//     // grabs all the products from the sanity dash board 
-//     const query = '*[_type== "product"]'
-//     const products = await client.fetch(query);
+export const getServerSideProps = async () => {
+    // grabs all the products from the sanity dash board 
+    const query = '*[_type== "product"]'
+    const products = await client.fetch(query);
     
-//     // grabs all the banner info from sanity
-//     const bannerQuery = '*[_type == "banner]'
-//     const bannerData = await client.fetch(bannerQuery);
+    // grabs all the banner info from sanity
+    const bannerQuery = '*[_type == "banner"]'
+    const bannerData = await client.fetch(bannerQuery);
+    
 
-//     return 
-//     {
-//       props : { products, bannerData}
-  
-//     }
-// }
+    return {
+      props : { products , bannerData}
+    }
+}
  
 export default Home;

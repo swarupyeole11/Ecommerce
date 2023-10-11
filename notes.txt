@@ -1,0 +1,4 @@
+1) started the project first setup independently the sanity dataset and nextjs app
+2) made the required schemas for the dataset and added some data to sanity 
+3) made the compoents foldeer and made the banner compoent 
+4) connected the sanity databse to 
