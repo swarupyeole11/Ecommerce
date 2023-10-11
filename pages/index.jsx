@@ -1,6 +1,6 @@
 import React from 'react';
 import { Product, Footer, HeroBanner } from '../components'
-import { client } from '../lib/client'
+// import { client } from '../lib/client'
 
 
 
