@@ -2,3 +2,8 @@
 2) made the required schemas for the dataset and added some data to sanity 
 3) made the compoents foldeer and made the banner compoent 
 4) connected the sanity databse to 
+5) pulled the data from sanity and then populated the hero banner component 
+6) Now starting to design the prodcts page 
+
+
+Pass the data from indexjs component to the products component
