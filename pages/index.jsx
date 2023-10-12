@@ -1,15 +1,15 @@
 import React from 'react';
-import { Product, Footer, HeroBanner } from '../components'
+import { Product, FooterBanner, HeroBanner } from '../components'
 import { client } from '../lib/client'
 
 
-const Home   = ({products ,bannerData}) => {
+export const Home   = ({products ,bannerData}) => {
 
   return (
     <>
-
+       {/* The logic is that if the length of the banner data is not 0 return the first instance */}
       <HeroBanner heroBanner = {bannerData.length && bannerData[0]} />
-      {/* {console.log(bannerData)} */}
+
       <div className="products-heading">
         <h2>Best Selling Product </h2>
         <p> Speakers of Many Variation</p>
@@ -18,14 +18,27 @@ const Home   = ({products ,bannerData}) => {
       <div className="products-container">
         {/* sending information of individual product with the help of map to the product compoent */}
         {products?.map((product) => <Product key={product}  product={product} /> )}
-       
       </div>
 
-      <Footer/>
+      <FooterBanner footerBanner = {bannerData.length && bannerData[0]}/>
 
     </>
   );
 };
+
+// this is to show that there can be only 1 default export 
+export const Homes   = () => {
+
+  return (
+    <>
+     
+      <h1>hola AMigo</h1>
+
+    </>
+  );
+};
+
+
 
 //  had It been react we would have directly made the api call using use effect but here we are using get server side props speciality of nextjs
 
