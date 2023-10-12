@@ -5,8 +5,9 @@
 5) pulled the data from sanity and then populated the hero banner component 
 6) Now starting to design the prodcts page 
 7) designed the footer
-8) Imported the Layout file in the app.js componetn and inside  it  <Component/> coponet was called  which is the basically the defualt componnet exported from which ever page you are on
+8) Imported the Layout file in the app.js component and inside  it  <Component/> coponet was called  which is the basically the defualt componnet exported from which ever page you are on
 9) The concept of children is that if you wrap your parentcomponent with any other childcomponent but the orginal declaration is somewhere else then you can access everything inside the childcomponent throught {children}  take e.g Layout Wrapped around  <Component {...pageProps} /> component 
 10) Layout helps in persisting thing across all the routes of pages along with the compoents that change
+11) In CSS the absolute is used for postioning abslute w.r.t to parent . The realtive is the normal postioning what ever postining we add is the shift from the normal postion
 
 Pass the data from indexjs component to the products component

@@ -249,7 +249,9 @@ text-align: end;
   position: absolute;
   /* top: -35%;
   left: 8%; */
-  top: -15%;
+  height: 28pc;
+  width: 30pc;
+  top: -8%;
   left: 25%;
 }
 .banner-desc .right{
